@@ -1,7 +1,12 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('service_plans', {
-      id: Sequelize.INTEGER,
+      id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        autoIncrement: true,
+        primaryKey: true,
+      },
       title: Sequelize.STRING,
       duration: Sequelize.INTEGER,
       price: Sequelize.DECIMAL,
