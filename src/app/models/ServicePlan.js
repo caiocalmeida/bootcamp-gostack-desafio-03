@@ -15,6 +15,10 @@ class ServicePlan extends Model {
 
     return this;
   }
+
+  getFullPrice() {
+    return this.duration * this.price;
+  }
 }
 
 export default ServicePlan;
